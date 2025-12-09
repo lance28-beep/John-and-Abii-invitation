@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { LoadingScreen } from './components/LoadingScreen';
 import { Hero } from './components/Hero';
 import { Details } from './components/Details';
@@ -9,12 +9,23 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  // Local background music (violin cover of Palagi by Tj Monterde)
-  // Using new URL keeps TypeScript happy without extra asset typings.
-  const MUSIC_URL = new URL(
-    './audio/Palagi - Tj Monterde  Violin Cover by BOJO.mp3',
-    import.meta.url
-  ).href;
+  // Public-served background music (violin cover of Palagi by Tj Monterde)
+  // Using the /audio path so it works in Netlify/Vite public folder.
+  const MUSIC_URL = '/audio/Palagi - Tj Monterde  Violin Cover by BOJO.mp3';
+
+  // Centralized play attempt to reuse across effects and gesture listeners.
+  const attemptPlay = useCallback(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.volume = 0.4;
+    audio
+      .play()
+      .then(() => setIsPlaying(true))
+      .catch((error) => {
+        console.log('Autoplay prevented by browser:', error);
+        setIsPlaying(false);
+      });
+  }, []);
 
   const handleLoadingComplete = () => {
     setAppState(AppState.LANDING);
@@ -38,24 +49,41 @@ function App() {
     }
   };
 
-  // Attempt autoplay when app enters LANDING state
+  // Try to autoplay on first render and whenever the landing state is shown.
   useEffect(() => {
-    if (appState === AppState.LANDING && audioRef.current) {
-      audioRef.current.volume = 0.4; // Set volume to 40%
-      audioRef.current.play()
-        .then(() => setIsPlaying(true))
-        .catch((error) => {
-          console.log("Autoplay prevented by browser:", error);
-          setIsPlaying(false);
-        });
+    attemptPlay();
+  }, [attemptPlay]);
+
+  // Retry autoplay when entering the LANDING state (after loader).
+  useEffect(() => {
+    if (appState === AppState.LANDING) {
+      attemptPlay();
     }
-  }, [appState]);
+  }, [appState, attemptPlay]);
+
+  // Attach a one-time gesture listener to satisfy browsers that require user intent.
+  useEffect(() => {
+    const handler = () => {
+      attemptPlay();
+      window.removeEventListener('pointerdown', handler);
+      window.removeEventListener('touchstart', handler);
+      window.removeEventListener('keydown', handler);
+    };
+    window.addEventListener('pointerdown', handler, { passive: true });
+    window.addEventListener('touchstart', handler, { passive: true });
+    window.addEventListener('keydown', handler);
+    return () => {
+      window.removeEventListener('pointerdown', handler);
+      window.removeEventListener('touchstart', handler);
+      window.removeEventListener('keydown', handler);
+    };
+  }, [attemptPlay]);
 
   return (
     <div className="relative min-h-screen bg-winter-cream text-winter-brown selection:bg-winter-brown selection:text-winter-cream overflow-hidden font-sans">
       
       {/* Background Music Audio Element */}
-      <audio ref={audioRef} src={MUSIC_URL} loop />
+      <audio ref={audioRef} src={MUSIC_URL} loop autoPlay playsInline />
 
       {/* Music Control Button - Visible after loading */}
       {appState !== AppState.LOADING && (
