@@ -1,4 +1,5 @@
 import React from 'react';
+import monogramForDetails from '../images/monogramfordetails.png';
 import { FadeIn } from './FadeIn';
 import { Countdown } from './Countdown';
 
@@ -47,27 +48,24 @@ export const Details: React.FC<DetailsProps> = ({ visible }) => {
               {/* Monogram Image */}
               <div className="mb-6 md:mb-8">
                 <img 
-                  src="/images/Monogram-removebg.png" 
+                  src={monogramForDetails} 
                   alt="Monogram Crest" 
                   className="w-40 md:w-64 h-auto mix-blend-multiply opacity-90"
                 />
               </div>
 
               <div className="flex flex-col items-center gap-2 md:gap-4">
-                 <p className="font-serif text-[0.65rem] md:text-sm tracking-[0.25em] md:tracking-[0.4em] text-winter-brown/60 uppercase">
+                 <p className="font-serif text-sm md:text-lg tracking-[0.25em] md:tracking-[0.4em] text-winter-brown/60 uppercase">
                    We are tying the Knot
                  </p>
-                 <h2 className="font-serif text-4xl md:text-6xl text-winter-brown font-medium tracking-tight mt-1 md:mt-2">
-                   John & Abii
-                 </h2>
                  
                  {/* Stylized Date */}
                  <div className="flex items-center gap-4 md:gap-6 mt-2 md:mt-4">
                    <span className="h-[1px] w-8 md:w-12 bg-winter-brown/30"></span>
                    <div className="flex flex-col items-center leading-none text-winter-red font-serif">
-                      <span className="text-[0.6rem] md:text-sm tracking-[0.2em] md:tracking-[0.3em] uppercase mb-1 text-winter-brown">November</span>
-                      <span className="text-2xl md:text-4xl">02</span>
-                      <span className="text-[0.6rem] md:text-sm tracking-[0.2em] md:tracking-[0.3em] uppercase mt-1 text-winter-brown">2028</span>
+                      <span className="text-sm md:text-lg tracking-[0.2em] md:tracking-[0.3em] uppercase mb-1 text-winter-brown">November</span>
+                      <span className="text-4xl md:text-6xl">02</span>
+                      <span className="text-sm md:text-lg tracking-[0.2em] md:tracking-[0.3em] uppercase mt-1 text-winter-brown">2028</span>
                    </div>
                    <span className="h-[1px] w-8 md:w-12 bg-winter-brown/30"></span>
                  </div>
@@ -121,13 +119,13 @@ export const Details: React.FC<DetailsProps> = ({ visible }) => {
                <div className="flex flex-col items-center">
                  <div className="transform -rotate-2 mb-6 md:mb-8">
                    <p className="font-hand text-3xl md:text-5xl text-winter-red font-bold">
-                      See you in Almaty,<br/>
+                      See you in Almaty<br/>
                       Kazakhstan!!
                    </p>
                  </div>
                  
                  <div className="flex flex-col items-center gap-1 md:gap-2">
-                    <p className="font-elegant italic text-lg md:text-xl text-winter-brown">With all our love,</p>
+                    <p className="font-elegant italic text-lg md:text-xl text-winter-brown">With all our love</p>
                     {/* Reusing Script Font for Signatures */}
                     <p className="font-script text-5xl md:text-6xl text-winter-brown mt-1 md:mt-2">John & Abii</p>
                  </div>

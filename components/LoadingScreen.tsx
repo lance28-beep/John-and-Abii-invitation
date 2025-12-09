@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import monogramForLoadingScreen from '../images/monogramforloadingScreen.png';
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -50,10 +51,10 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
               mix-blend-multiply makes the white background of the image transparent against the cream bg.
            */}
           <img 
-            src="/images/Monogram-removebg.png" 
-             alt="John & Abii Monogram" 
-             className="w-44 h-auto md:w-64 mix-blend-multiply opacity-90"
-           />
+            src={monogramForLoadingScreen} 
+            alt="John & Abii Monogram" 
+            className="w-44 h-auto md:w-64 mix-blend-multiply opacity-90"
+          />
         </div>
 
         {/* Text Details - Reveal Second */}
