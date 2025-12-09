@@ -52,11 +52,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
         {/* Top Text: "Just for YOU !!" */}
         <FadeIn show={visible} delay={300} className="mb-6">
            <div className="relative transform -rotate-1">
-             <h2 className="font-serif text-5xl md:text-7xl text-winter-brown drop-shadow-sm font-semibold leading-none tracking-tight">
+            <h2 className="font-script text-5xl md:text-7xl text-winter-brown drop-shadow-sm leading-none">
                Just for
              </h2>
-             <span className="font-serif text-6xl md:text-8xl text-winter-red block -mt-1 md:-mt-2 tracking-tight">
-               YOU !!
+            <span className="font-script text-6xl md:text-8xl text-winter-red block -mt-1 md:-mt-2">
+               You!!
              </span>
              {/* Decorative sketch lines */}
              <svg className="absolute -top-4 -right-4 w-12 h-12 text-winter-brown/40 animate-pulse-slow" viewBox="0 0 100 100">
@@ -72,33 +72,33 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
             <div className="border-4 border-winter-brown p-4 relative">
               
               <div className="flex justify-between items-end border-b-2 border-winter-brown pb-2 mb-2">
-                 <span className="font-serif text-xl md:text-3xl text-winter-brown font-semibold">November 2028</span>
+                 <span className="font-script text-3xl md:text-4xl text-winter-brown">November 2028</span>
                  {/* Little heart sketch */}
                  <svg className="w-6 h-6 text-winter-red mb-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
               </div>
               
               <div className="grid grid-cols-3 text-center">
-                <div className="font-serif text-base md:text-xl text-winter-brown font-semibold py-2 border-r-2 border-winter-brown">Wed</div>
-                <div className="font-serif text-base md:text-xl text-winter-brown font-semibold py-2 border-r-2 border-winter-brown">Thu</div>
-                <div className="font-serif text-base md:text-xl text-winter-brown font-semibold py-2">Fri</div>
+                <div className="font-script text-xl md:text-2xl text-winter-brown py-2 border-r-2 border-winter-brown">Wed</div>
+                <div className="font-script text-xl md:text-2xl text-winter-brown py-2 border-r-2 border-winter-brown">Thu</div>
+                <div className="font-script text-xl md:text-2xl text-winter-brown py-2">Fri</div>
                 
                 {/* Horizontal Line */}
                 <div className="col-span-3 h-0.5 bg-winter-brown mb-2"></div>
 
                 {/* Dates */}
-                <div className="font-serif text-4xl md:text-5xl text-winter-brown/70 py-4 border-r-2 border-winter-brown flex items-center justify-center">1</div>
+                <div className="font-script text-5xl md:text-5xl text-winter-brown/70 py-4 border-r-2 border-winter-brown flex items-center justify-center">1</div>
                 
                 {/* Nov 2 - Circled */}
-                <div className="relative flex items-center justify-center border-r-2 border-winter-brown py-4">
-                   {/* Sketch Circle */}
-                   <svg className="absolute w-16 h-16 md:w-20 md:h-20 text-winter-red animate-pulse-slow transform -rotate-12" viewBox="0 0 100 100">
-                     <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="10 5" opacity="0.8" />
-                     <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
-                   </svg>
-                   <div className="font-serif text-5xl md:text-6xl text-winter-red font-semibold relative z-10">2</div>
+                 <div className="relative flex items-center justify-center border-r-2 border-winter-brown py-4">
+                    {/* Sketch Circle */}
+                    <svg className="absolute w-20 h-20 md:w-24 md:h-24 text-winter-red animate-pulse-slow transform -rotate-12 drop-shadow-[0_2px_4px_rgba(0,0,0,0.18)]" viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" strokeWidth="3" strokeDasharray="12 6" opacity="0.85" />
+                      <circle cx="50" cy="50" r="39" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity="0.9" />
+                    </svg>
+                   <div className="font-script text-6xl md:text-6xl text-winter-red relative z-10">2</div>
                 </div>
                 
-                <div className="font-serif text-4xl md:text-5xl text-winter-brown/70 py-4 flex items-center justify-center">3</div>
+                <div className="font-script text-5xl md:text-5xl text-winter-brown/70 py-4 flex items-center justify-center">3</div>
               </div>
             </div>
             
@@ -110,11 +110,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
         {/* Bottom Text */}
         <FadeIn show={visible} delay={900}>
           <div className="mb-10 transform -rotate-1 text-center">
-            <p className="font-serif text-2xl md:text-4xl text-winter-brown font-semibold uppercase tracking-[0.2em]">
-              we ARE tying the
+            <p className="font-script text-3xl md:text-5xl text-winter-brown leading-tight">
+              We are tying the
             </p>
-            <p className="font-serif text-4xl md:text-6xl text-winter-red font-semibold tracking-tight mt-0">
-              KNOT!!
+            <p className="font-script text-5xl md:text-7xl text-winter-red leading-tight mt-1">
+              Knot!!
             </p>
           </div>
         </FadeIn>
