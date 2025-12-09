@@ -118,16 +118,16 @@ export const Details: React.FC<DetailsProps> = ({ visible }) => {
             <FadeIn show={visible} delay={1200} className="w-full pt-6 md:pt-10 border-t border-winter-brown/10 mt-2 md:mt-4">
                <div className="flex flex-col items-center">
                  <div className="transform -rotate-2 mb-6 md:mb-8">
-                   <p className="font-serif text-3xl md:text-5xl text-winter-red font-bold">
+                   <p className="font-serif text-3xl md:text-5xl text-winter-brown font-bold">
                       See you in Almaty<br/>
                       Kazakhstan!!
                    </p>
                  </div>
                  
                  <div className="flex flex-col items-center gap-1 md:gap-2">
-                    <p className="font-elegant italic text-lg md:text-xl text-winter-brown">With all our love</p>
+                    <p className="font-elegant italic text-lg md:text-xl text-winter-red">With all our love</p>
                     {/* Reusing Script Font for Signatures */}
-                    <p className="font-script text-5xl md:text-6xl text-winter-brown mt-1 md:mt-2">John & Abii</p>
+                    <p className="font-script text-5xl md:text-6xl text-winter-red mt-1 md:mt-2">John & Abii</p>
                  </div>
                </div>
             </FadeIn>

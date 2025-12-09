@@ -49,6 +49,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
       {/* Content Container */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center p-4 sm:p-6 w-full max-w-lg mx-auto h-full">
         
+        {/* Monogram - Above Calendar */}
+        <FadeIn show={visible} delay={400} className="mb-6">
+          <img 
+            src="/images/Monogram-removebg-preview.png" 
+            alt="John & Abii Monogram" 
+            className="w-48 h-auto md:w-64 mix-blend-multiply opacity-90"
+          />
+        </FadeIn>
+
         {/* Calendar Widget based on Sketch */}
         <FadeIn show={visible} delay={600} className="w-full max-w-xs sm:max-w-sm mb-8">
           <div className="relative bg-winter-cream/90 backdrop-blur-sm shadow-xl transform rotate-2 hover:rotate-0 transition-transform duration-700 ease-out p-1">
@@ -91,19 +100,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
           </div>
         </FadeIn>
 
-        {/* Bottom Text */}
         <FadeIn show={visible} delay={900}>
-          <div className="mb-10 transform -rotate-1 text-center">
-            <p className="font-script text-3xl md:text-5xl text-winter-brown leading-tight">
-              We are tying the
-            </p>
-            <p className="font-script text-5xl md:text-7xl text-winter-red leading-tight mt-1">
-              Knot!!
-            </p>
-          </div>
-        </FadeIn>
-
-        <FadeIn show={visible} delay={1200}>
           <button 
             onClick={onOpen}
             className="group relative px-8 md:px-10 py-3 bg-transparent border-2 border-winter-brown text-winter-brown font-serif text-sm md:text-lg tracking-[0.2em] uppercase transition-all duration-300 hover:bg-winter-brown hover:text-white overflow-hidden"
