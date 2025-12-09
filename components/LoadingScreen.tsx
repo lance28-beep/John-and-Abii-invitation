@@ -9,13 +9,13 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
   const [isExiting, setIsExiting] = useState(false);
 
   useEffect(() => {
-    // Stretch the experience into the 5–8s range for a calmer entry.
+    // Stretch the experience into the 10–13s range for a calmer entry.
     const timeline = [
       { delay: 800, action: () => setStage(1) }, // Reveal Monogram
       { delay: 2000, action: () => setStage(2) }, // Reveal Text
       { delay: 3200, action: () => setStage(3) }, // Reveal Date
-      { delay: 5200, action: () => setIsExiting(true) }, // Start Exit
-      { delay: 7200, action: onComplete } // Complete
+      { delay: 10200, action: () => setIsExiting(true) }, // Start Exit (+5s)
+      { delay: 12200, action: onComplete } // Complete (+5s)
     ];
 
     const timeouts = timeline.map(({ delay, action }) => setTimeout(action, delay));

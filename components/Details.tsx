@@ -106,9 +106,13 @@ export const Details: React.FC<DetailsProps> = ({ visible }) => {
               </FadeIn>
 
               <FadeIn show={visible} delay={1000}>
-                <p className="font-sans text-[0.6rem] md:text-xs text-winter-brown/40 uppercase tracking-[0.25em] mt-4 md:mt-8">
-                  Formal invitation to follow
-                </p>
+                <div className="flex items-center justify-center gap-3 mt-6 md:mt-10">
+                  <span className="h-px w-10 bg-winter-brown/30" />
+                  <p className="font-serif text-sm md:text-base tracking-[0.3em] uppercase text-winter-brown/80 bg-winter-cream px-4 py-2 border border-winter-brown/20 shadow-sm">
+                    Formal invitation to follow
+                  </p>
+                  <span className="h-px w-10 bg-winter-brown/30" />
+                </div>
               </FadeIn>
             </div>
 
