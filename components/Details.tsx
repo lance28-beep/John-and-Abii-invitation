@@ -49,7 +49,7 @@ export const Details: React.FC<DetailsProps> = ({ visible }) => {
                 <img 
                   src="/images/Monogram-removebg.png" 
                   alt="Monogram Crest" 
-                  className="w-32 md:w-56 h-auto mix-blend-multiply opacity-90"
+                  className="w-40 md:w-64 h-auto mix-blend-multiply opacity-90"
                 />
               </div>
 

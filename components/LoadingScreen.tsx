@@ -9,12 +9,13 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
   const [isExiting, setIsExiting] = useState(false);
 
   useEffect(() => {
+    // Stretch the experience into the 5–8s range for a calmer entry.
     const timeline = [
-      { delay: 500, action: () => setStage(1) }, // Reveal Monogram
-      { delay: 1500, action: () => setStage(2) }, // Reveal Text
-      { delay: 2500, action: () => setStage(3) }, // Reveal Date
-      { delay: 4000, action: () => setIsExiting(true) }, // Start Exit
-      { delay: 5000, action: onComplete } // Complete
+      { delay: 800, action: () => setStage(1) }, // Reveal Monogram
+      { delay: 2000, action: () => setStage(2) }, // Reveal Text
+      { delay: 3200, action: () => setStage(3) }, // Reveal Date
+      { delay: 5200, action: () => setIsExiting(true) }, // Start Exit
+      { delay: 7200, action: onComplete } // Complete
     ];
 
     const timeouts = timeline.map(({ delay, action }) => setTimeout(action, delay));
@@ -24,7 +25,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
   return (
     <div 
-      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-winter-cream text-winter-brown transition-opacity duration-1000 ease-in-out ${
+      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#EBD5D6] text-winter-brown transition-opacity duration-1000 ease-in-out ${
         isExiting ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
     >
@@ -32,7 +33,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
       <div className="absolute inset-0 opacity-40 pointer-events-none paper-texture" />
 
       {/* Subtle Background Animation */}
-      <div className={`absolute pointer-events-none opacity-5 transition-opacity duration-2000 ${stage >= 1 ? 'opacity-[0.05]' : 'opacity-0'}`}>
+      <div className={`absolute pointer-events-none transition-opacity duration-2000 ${stage >= 1 ? 'opacity-[0.12]' : 'opacity-0'}`}>
          <svg className="w-[600px] h-[600px] md:w-[800px] md:h-[800px] animate-spin-slow text-winter-brown" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.2">
            <circle cx="50" cy="50" r="48" strokeDasharray="1 3" />
            <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.1" />
@@ -51,7 +52,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           <img 
             src="/images/Monogram-removebg.png" 
              alt="John & Abii Monogram" 
-             className="w-32 h-auto md:w-48 mix-blend-multiply opacity-90"
+             className="w-44 h-auto md:w-64 mix-blend-multiply opacity-90"
            />
         </div>
 
