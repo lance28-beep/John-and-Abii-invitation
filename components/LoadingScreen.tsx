@@ -49,9 +49,9 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
               mix-blend-multiply makes the white background of the image transparent against the cream bg.
            */}
           <img 
-            src="/images/Monogram-removebg.png" 
+            src="/images/Monogram-removebg-preview.png" 
              alt="John & Abii Monogram" 
-             className="w-32 h-auto md:w-48 mix-blend-multiply opacity-90"
+             className="w-48 h-auto md:w-72 mix-blend-multiply opacity-90"
            />
         </div>
 
@@ -69,7 +69,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
         <div className={`flex flex-col items-center gap-3 transition-all duration-1000 delay-500 ease-out transform ${stage >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}`}>
            <div className="w-12 h-[1px] bg-winter-brown/40 my-2"></div>
            <p className="font-elegant text-xl md:text-2xl italic text-winter-brown tracking-widest">
-             2028
+             2029
            </p>
         </div>
 
