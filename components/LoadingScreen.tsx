@@ -10,11 +10,11 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
   useEffect(() => {
     const timeline = [
-      { delay: 500, action: () => setStage(1) }, // Reveal Monogram
-      { delay: 1500, action: () => setStage(2) }, // Reveal Text
-      { delay: 2500, action: () => setStage(3) }, // Reveal Date
-      { delay: 4000, action: () => setIsExiting(true) }, // Start Exit
-      { delay: 5000, action: onComplete } // Complete
+      { delay: 1000, action: () => setStage(1) }, // Reveal Monogram
+      { delay: 3000, action: () => setStage(2) }, // Reveal Text
+      { delay: 5000, action: () => setStage(3) }, // Reveal Date
+      { delay: 10000, action: () => setIsExiting(true) }, // Start Exit
+      { delay: 12000, action: onComplete } // Complete (12 seconds total)
     ];
 
     const timeouts = timeline.map(({ delay, action }) => setTimeout(action, delay));
@@ -29,7 +29,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
       }`}
     >
       {/* Background Texture Overlay */}
-      <div className="absolute inset-0 opacity-40 pointer-events-none paper-texture" />
+      <div className="absolute inset-0 opacity-60 pointer-events-none paper-texture" />
 
       {/* Subtle Background Animation */}
       <div className={`absolute pointer-events-none opacity-5 transition-opacity duration-2000 ${stage >= 1 ? 'opacity-[0.05]' : 'opacity-0'}`}>
