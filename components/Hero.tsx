@@ -72,33 +72,33 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
             <div className="border-4 border-winter-brown p-4 relative">
               
               <div className="flex justify-between items-end border-b-2 border-winter-brown pb-2 mb-2">
-                 <span className="font-script text-3xl md:text-4xl text-winter-brown">November 2028</span>
+                 <span className="font-script text-3xl md:text-4xl text-winter-brown">January 2029</span>
                  {/* Little heart sketch */}
                  <svg className="w-6 h-6 text-winter-red mb-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
               </div>
               
               <div className="grid grid-cols-3 text-center">
-                <div className="font-script text-xl md:text-2xl text-winter-brown py-2 border-r-2 border-winter-brown">Wed</div>
-                <div className="font-script text-xl md:text-2xl text-winter-brown py-2 border-r-2 border-winter-brown">Thu</div>
-                <div className="font-script text-xl md:text-2xl text-winter-brown py-2">Fri</div>
+                <div className="font-script text-xl md:text-2xl text-winter-brown py-2 border-r-2 border-winter-brown">Fri</div>
+                <div className="font-script text-xl md:text-2xl text-winter-brown py-2 border-r-2 border-winter-brown">Sat</div>
+                <div className="font-script text-xl md:text-2xl text-winter-brown py-2">Sun</div>
                 
                 {/* Horizontal Line */}
                 <div className="col-span-3 h-0.5 bg-winter-brown mb-2"></div>
 
                 {/* Dates */}
-                <div className="font-script text-5xl md:text-5xl text-winter-brown/70 py-4 border-r-2 border-winter-brown flex items-center justify-center">1</div>
+                <div className="font-script text-5xl md:text-5xl text-winter-brown/70 py-4 border-r-2 border-winter-brown flex items-center justify-center">19</div>
                 
-                {/* Nov 2 - Circled */}
+                {/* Jan 20 - Circled */}
                  <div className="relative flex items-center justify-center border-r-2 border-winter-brown py-4">
                     {/* Sketch Circle */}
                     <svg className="absolute w-20 h-20 md:w-24 md:h-24 text-winter-red animate-pulse-slow transform -rotate-12 drop-shadow-[0_2px_4px_rgba(0,0,0,0.18)]" viewBox="0 0 100 100">
                       <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" strokeWidth="3" strokeDasharray="12 6" opacity="0.85" />
                       <circle cx="50" cy="50" r="39" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity="0.9" />
                     </svg>
-                   <div className="font-script text-6xl md:text-6xl text-winter-red relative z-10">2</div>
+                   <div className="font-script text-6xl md:text-6xl text-winter-red relative z-10">20</div>
                 </div>
                 
-                <div className="font-script text-5xl md:text-5xl text-winter-brown/70 py-4 flex items-center justify-center">3</div>
+                <div className="font-script text-5xl md:text-5xl text-winter-brown/70 py-4 flex items-center justify-center">21</div>
               </div>
             </div>
             

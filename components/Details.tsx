@@ -63,9 +63,9 @@ export const Details: React.FC<DetailsProps> = ({ visible }) => {
                  <div className="flex items-center gap-4 md:gap-6 mt-2 md:mt-4">
                    <span className="h-[1px] w-8 md:w-12 bg-winter-brown/30"></span>
                    <div className="flex flex-col items-center leading-none text-winter-red font-serif">
-                      <span className="text-sm md:text-lg tracking-[0.2em] md:tracking-[0.3em] uppercase mb-1 text-winter-brown">November</span>
-                      <span className="text-4xl md:text-6xl">02</span>
-                      <span className="text-sm md:text-lg tracking-[0.2em] md:tracking-[0.3em] uppercase mt-1 text-winter-brown">2028</span>
+                      <span className="text-sm md:text-lg tracking-[0.2em] md:tracking-[0.3em] uppercase mb-1 text-winter-brown">January</span>
+                      <span className="text-4xl md:text-6xl">20</span>
+                      <span className="text-sm md:text-lg tracking-[0.2em] md:tracking-[0.3em] uppercase mt-1 text-winter-brown">2029</span>
                    </div>
                    <span className="h-[1px] w-8 md:w-12 bg-winter-brown/30"></span>
                  </div>

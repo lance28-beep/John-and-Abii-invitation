@@ -9,8 +9,8 @@ interface TimeLeft {
 
 export const Countdown: React.FC = () => {
   const calculateTimeLeft = (): TimeLeft => {
-    // Target Date: November 2, 2028
-    const difference = +new Date('2028-11-02T00:00:00') - +new Date();
+    // Target Date: January 20, 2029
+    const difference = +new Date('2029-01-20T00:00:00') - +new Date();
     
     let timeLeft: TimeLeft = {
       days: 0,
