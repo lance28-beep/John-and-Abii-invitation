@@ -49,22 +49,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
       {/* Content Container */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center p-4 sm:p-6 w-full max-w-lg mx-auto h-full">
         
-        {/* Top Text: "Just for YOU !!" */}
-        <FadeIn show={visible} delay={300} className="mb-6">
-           <div className="relative transform -rotate-1">
-            <h2 className="font-script text-5xl md:text-7xl text-winter-brown drop-shadow-sm leading-none">
-               Just for
-             </h2>
-            <span className="font-script text-6xl md:text-8xl text-winter-red block -mt-1 md:-mt-2">
-               You!!
-             </span>
-             {/* Decorative sketch lines */}
-             <svg className="absolute -top-4 -right-4 w-12 h-12 text-winter-brown/40 animate-pulse-slow" viewBox="0 0 100 100">
-                <path d="M10,50 Q50,10 90,50 T10,50" fill="none" stroke="currentColor" strokeWidth="2" />
-             </svg>
-           </div>
-        </FadeIn>
-
         {/* Calendar Widget based on Sketch */}
         <FadeIn show={visible} delay={600} className="w-full max-w-xs sm:max-w-sm mb-8">
           <div className="relative bg-winter-cream/90 backdrop-blur-sm shadow-xl transform rotate-2 hover:rotate-0 transition-transform duration-700 ease-out p-1">

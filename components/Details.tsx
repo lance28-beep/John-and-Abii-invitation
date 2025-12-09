@@ -1,5 +1,5 @@
 import React from 'react';
-import monogramForDetails from '../images/monogramfordetails.png';
+import monogramForDetails from '../public/images/Monogram-removebg-preview.png';
 import { FadeIn } from './FadeIn';
 import { Countdown } from './Countdown';
 
@@ -118,7 +118,7 @@ export const Details: React.FC<DetailsProps> = ({ visible }) => {
             <FadeIn show={visible} delay={1200} className="w-full pt-6 md:pt-10 border-t border-winter-brown/10 mt-2 md:mt-4">
                <div className="flex flex-col items-center">
                  <div className="transform -rotate-2 mb-6 md:mb-8">
-                   <p className="font-hand text-3xl md:text-5xl text-winter-red font-bold">
+                   <p className="font-serif text-3xl md:text-5xl text-winter-red font-bold">
                       See you in Almaty<br/>
                       Kazakhstan!!
                    </p>
