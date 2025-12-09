@@ -25,7 +25,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
   return (
     <div 
-      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#EBD5D6] text-winter-brown transition-opacity duration-1000 ease-in-out ${
+      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#f2e4e4] text-winter-brown transition-opacity duration-1000 ease-in-out ${
         isExiting ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
     >
@@ -33,7 +33,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
       <div className="absolute inset-0 opacity-40 pointer-events-none paper-texture" />
 
       {/* Subtle Background Animation */}
-      <div className={`absolute pointer-events-none transition-opacity duration-2000 ${stage >= 1 ? 'opacity-[0.12]' : 'opacity-0'}`}>
+      <div className={`absolute pointer-events-none transition-opacity duration-2000 ${stage >= 1 ? 'opacity-[0.08]' : 'opacity-0'}`}>
          <svg className="w-[600px] h-[600px] md:w-[800px] md:h-[800px] animate-spin-slow text-winter-brown" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.2">
            <circle cx="50" cy="50" r="48" strokeDasharray="1 3" />
            <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.1" />
