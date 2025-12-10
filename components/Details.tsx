@@ -76,16 +76,16 @@ export const Details: React.FC<DetailsProps> = ({ visible }) => {
             <div className="space-y-8 md:space-y-10 font-elegant text-winter-brown text-lg md:text-2xl leading-relaxed max-w-2xl mx-auto px-1 md:px-0">
               
               <FadeIn show={visible} delay={400}>
-                <p>
-                  Before anything else is announced, we wanted to share something with you that means the world to us. It may feel a little early, but keeping this from you felt impossible.
+                <p className="font-elegant text-winter-red text-xl md:text-3xl italic font-normal px-2 md:px-4 relative z-10">
+                  Before anything else is announced, we want to share something with you that means the world to us. If may feel a little early, but keeping this from you felt impossible.
                 </p>
               </FadeIn>
 
               <FadeIn show={visible} delay={600}>
                 <div className="relative py-2">
                    <span className="absolute top-0 left-0 text-4xl md:text-6xl text-winter-brown/10 font-serif -translate-x-2 -translate-y-2 md:-translate-x-4 md:-translate-y-4">“</span>
-                   <p className="font-elegant text-winter-red text-xl md:text-3xl italic font-medium px-2 md:px-4 relative z-10">
-                     When we imagine that day, we picture your warmth beside us. Your presence, your support, and your love. You’re a part of the picture our hearts keep returning to.
+                   <p className="font-elegant text-winter-red text-xl md:text-3xl italic font-normal px-2 md:px-4 relative z-10">
+                     When we imagine that day, we picture your presence, your support, your warmth and your love vibrating throughout the church. You are a part of the biggest celebration in our lives, our wedding day!
                    </p>
                    <span className="absolute bottom-0 right-0 text-4xl md:text-6xl text-winter-brown/10 font-serif translate-x-2 translate-y-2 md:translate-x-4 md:translate-y-4">”</span>
                 </div>
