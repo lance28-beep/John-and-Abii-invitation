@@ -119,8 +119,8 @@ export const Details: React.FC<DetailsProps> = ({ visible }) => {
                <div className="flex flex-col items-center">
                  <div className="transform -rotate-2 mb-6 md:mb-8">
                    <p className="font-serif text-3xl md:text-5xl text-winter-brown font-bold">
-                      See you in Almaty<br/>
-                      Kazakhstan!!
+                   See you in Yerevan<br/>
+                   Armenia!!
                    </p>
                  </div>
                  
